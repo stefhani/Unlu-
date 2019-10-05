@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="JPAPU">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.unlu.db2.tp2.entity.Cliente</class>
+        <class>com.unlu.db2.tp2.entity.Factura</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:firebirdsql://localhost:3050/C:\\Users\\scadillo\\Desktop\\stecad\\Unlu\\db2\\tp2\\db\\tp2.fdb"/>
+            <property name="javax.persistence.jdbc.user" value="SYSDBA"/>
+            <property name="javax.persistence.jdbc.driver" value="org.firebirdsql.jdbc.FBDriver"/>
+            <property name="javax.persistence.jdbc.password" value="masterkey"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
