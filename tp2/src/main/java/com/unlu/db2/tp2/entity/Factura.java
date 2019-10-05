@@ -10,7 +10,9 @@ import java.io.Serializable;
 @Entity
 @Table(name="Factura")
 @NamedQueries({
-        @NamedQuery(name="Facturatodos", query="select f from Factura f ")
+        @NamedQuery(name="Facturatodos", query="select f from Factura f "),
+        @NamedQuery(name="Facturaimporte", query="select f from Factura f where f.importe <= :importe"),
+        @NamedQuery(name="Facturaxnro", query="select f from Factura f where f.nro = :nro")
 })
 public class Factura implements Serializable {
 

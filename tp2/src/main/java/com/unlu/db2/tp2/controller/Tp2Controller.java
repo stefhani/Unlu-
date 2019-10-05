@@ -34,4 +34,40 @@ public class Tp2Controller {
         Dao per = new Dao();
         return  per.listarFacturas();
     }
+
+    public List<Factura> listFacturaXImporte(double importe){
+        Dao per = new Dao();
+        return  per.listarFacturasXImporte(importe);
+    }
+
+    public List<Cliente> listClienteXDescr(String descr){
+        Dao per = new Dao();
+        return  per.listarClienteXDescr(descr);
+    }
+
+    public List<Cliente> listClientePorId(int id){
+        Dao per = new Dao();
+        return  per.listarClientePorId(id);
+    }
+
+    public List<Factura> listFacturaXId(int nro){
+        Dao per = new Dao();
+        return  per.listarFacturasXId(nro);
+    }
+
+    public void deleteFacturaXNro(Long nro){
+        Dao per = new Dao();
+        per.deleteFacturaXNro(nro);
+    }
+
+    public void deleteClienteXId(Long id){
+        Dao per = new Dao();
+        per.deleteClienteXId(id);
+    }
+
+    public void updateClienteXId(Long id,String descr){
+        Dao per = new Dao();
+        per.updateClienteXId(id,descr);
+    }
+
 }

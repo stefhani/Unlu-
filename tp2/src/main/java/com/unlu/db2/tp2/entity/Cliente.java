@@ -10,7 +10,9 @@ import java.io.Serializable;
 @Entity
 @Table(name="Cliente")
 @NamedQueries({
-        @NamedQuery(name="Clientetodos", query="select c from Cliente c")
+        @NamedQuery(name="Clientetodos", query="select c from Cliente c"),
+        @NamedQuery(name="Clienteporid", query="select c from Cliente c where c.id = :id")
+       // @NamedQuery(name="ClienteXDescr", query="select c from Cliente c where c.descr LIKE :id ")
 })
 public class Cliente implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -33,7 +35,7 @@ public class Cliente implements Serializable {
         this.name=name;
     }
 
-    public String getNombre(){
+    public String getName(){
         return name;
     }
 
